@@ -29,11 +29,11 @@ app.use(express.static(path.join(__dirname, "/public")))
 
 
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
-const dbUrl = process.env.ATLAS_DB_URL;
+const dbUrl = process.env.ATLASDB_URL;
 
 
 const store = MongoStore.create({
-    mongoUrl: dbUrl,
+    mongoUrl:dbUrl,
     crypto: {
         secret: process.env.SECRET
     },
